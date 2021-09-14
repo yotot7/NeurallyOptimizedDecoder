@@ -71,20 +71,18 @@
 
                 <div class="container" style="max-width:850px; margin-top: 20px; margin-bottom: 40px">
                     <p style='line-height:1.3; font-size:large; text-align: justify'>
-                        Recently, speech synthesis based on generative models has been successfully 
-                        applied to the speech codec area. Despitetheir  notable  improvements  in  the  
-                        speech  quality,  conventional neural  decoder  typically  requires  the  prior  
-                        information  of  the original  speech  codec  such  as  bit  allocation  or  
-                        de-quantization methods,  which  is  not  a  general  solution  for  various  
-                        types  of codecs.   To   address   this   limitation,   we   propose   an   
-                        imitation neural  decoder  based  on  a  generative  model  which  can  directly
-                        reconstruct  the  speech  from  the  bitstream  without  any  speech codec  information.  
-                        Additionally,  we  propose  a  de-quantization network  that  can  find  which  bits  are  
-                        related  and  de-quantizethe  bitstreams  to  extract  a  conditional  variable  which  
-                        helps  the generative model restore the original speech. Through a number of experiments 
+                        Recently, generative model-based speech codec has shown promising performance, 
+                        however, it typically requires a prior knowledge of speech codec such as bit 
+                        allocation or dequantization scheme, which is not a universal solution for many 
+                        different kinds of speech codecs. In order to address this limitation, we propose 
+                        a neurally optimized decoder based on a generative model which can directly 
+                        reconstruct the speech from the bitstream without a prior knowledge. The proposed 
+                        decoder mainly consists of two components: 1) the dequantization model to group 
+                        and dequantize related bits from the bitstream and 2) the generative model to restore 
+                        the speech conditioned on the output of the dequantization model. Through experiments 
                         with mixed excitation linear prediction (MELP), Advanced multi-band excitation (AMBE), 
-                        and SPEEX at 2.4 kb/s, it  is  verified  that  the  proposed  method  shows  better  
-                        subjective and  objective  results  than  the  original  speech  codecs.
+                        and SPEEX at 2.4 kb/s, it is verified that the proposed method shows better performance 
+                        in subjective and objective evaluation compared to the conventional speech codecs.
                     </p>
                 </div>
             </div>
